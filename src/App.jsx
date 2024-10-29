@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
@@ -7,7 +8,7 @@ function App() {
   const [list, setList] = useState(null);
   const [filteredList, setFilteredList] = useState([]);
   const [searched, setSearched] = useState(false);
-  const [minClose, setMinClose] = useState(120);
+  const [minClose, setMinClose] = useState(0);
   const [minVolume, setMinVolume] = useState(0);
 
   const filterList = (s) => {
@@ -89,10 +90,10 @@ function App() {
           <p>min closing price: {minClose}</p>
           <input
             type="range"
-            min="120"
-            max="140"
+            min="0"
+            max="200"
             value={minClose}
-            step="2"
+            step="20"
             onChange={(e) => {
               setMinClose(e.target.value);
               setSearched(true);
@@ -108,9 +109,9 @@ function App() {
           <input
             type="range"
             min="0"
-            max="400000000"
+            max="1000000000"
             value={minVolume}
-            step="40000000"
+            step="50000000"
             onChange={(e) => {
               setMinVolume(e.target.value);
               setSearched(true);
@@ -148,6 +149,14 @@ function App() {
                     <td>{item.low}</td>
                     <td>{item.close}</td>
                     <td>{item.volume}</td>
+                    <td>
+                      <Link
+                        to={`/Detail/${item.date.substring(0, 10)}`}
+                        key={item.date.substring(0, 10)}
+                      >
+                        Detail
+                      </Link>
+                    </td>
                   </tr>
                 ))
               : list &&
@@ -159,6 +168,14 @@ function App() {
                     <td>{item.low}</td>
                     <td>{item.close}</td>
                     <td>{item.volume}</td>
+                    <td>
+                      <Link
+                        to={`/Detail/${item.date.substring(0, 10)}`}
+                        key={item.date.substring(0, 10)}
+                      >
+                        Detail
+                      </Link>
+                    </td>
                   </tr>
                 ))}
           </tbody>
