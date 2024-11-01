@@ -29,10 +29,6 @@ GIF created with Gifski
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
-
-Manipulating routes is quite complicated.
-
 ## License
 
     Copyright [2024] [Steven Hsiao]
