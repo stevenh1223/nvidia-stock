@@ -1,29 +1,18 @@
-# Web Development Project 6 - _Nvidia Stock_
+# Web Development Project - _Nvidia Stock_
 
 Submitted by: **Steven Hsiao**
 
-This web app: **Nvidia's stock price over the past 10 days**
+This web app: **Nvidia's stock price over the past 10 days from the marketstack API**
 
-Time spent: **5** hours spent in total
+## Features
 
-## Required Features
+The following features are implemented:
 
-The following **required** functionality is completed:
-
-- [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [x] **Clicking on an item in the list view displays more details about it**
-  - [x] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
-- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
-  - [x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.
-
-The following **optional** features are implemented:
-
-- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
-- [ ] The site allows users to toggle between different data visualizations
-
-The following **additional** features are implemented:
-
-- [ ] List anything else that you added to improve the site's functionality!
+- The site displays a list of data fetched using an API call, using the useEffect React hook and async/await syntax
+- The app dashboard includes three summary statistics about the data, such as: the total number of items in the dataset, the mean, and ranges of the data
+- A search bar allows the user to search for an item in the fetched data
+- Multiple different filters allow the user to filter items in the database by specified categories
+- Each detail view of an item has a direct, unique link to that item’s detail view page
 
 ## Video Walkthrough
 
